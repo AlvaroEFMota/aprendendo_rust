@@ -4,6 +4,7 @@ use std::mem; //if we put this, we can only use mem::size_of_val() intead of std
 
 pub fn run(){
     let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    
 
     // Re-assign value
     numbers[2] = 20;
