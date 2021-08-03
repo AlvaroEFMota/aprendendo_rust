@@ -29,6 +29,19 @@ fn add3<T,U> ( a: T, b: T, _c: U ) -> T //variables unuserd must start with unde
     a+b
 }
 
+fn largest<T>(list: &[T]) -> T
+    where T: std::cmp::PartialOrd + std::marker::Copy{
+    let mut largest = list[0];
+
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
 pub fn run(){
     let p1 = Point { x: 54, y: -1025 };
     println!("point: {} {}", p1.x, p1.y);
@@ -45,4 +58,6 @@ pub fn run(){
     println!("r: {}", r);
     println!("s: {}", s);
     println!("t: {}", t);
+
+    println!("largest: {}", largest(&[10,15,3,7]));
 }

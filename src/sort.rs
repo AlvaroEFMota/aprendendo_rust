@@ -7,14 +7,16 @@ pub fn merge_sort(v: &mut [i32], start: usize, end: usize) {
         let mut aux_j = vec![0; middle-start]; // To create an empty vector, just use vec![]
         let mut aux_k = vec![0; end-middle];
 
-        for i in 0..(middle-start) { // Encontrar uma melhor forma de copiar os dados
+        /*for i in 0..(middle-start) { // Encontrar uma melhor forma de copiar os dados
             aux_j[i] = v[i+start];
         }
-
         for i in 0..(end-middle) {
             aux_k[i] = v[middle+i];
-        }
-        
+        }*/
+
+        aux_j.copy_from_slice(&v[start..middle]); // Encontrado a melhor forma
+        aux_k.copy_from_slice(&v[middle..end]);
+
         let mut j = 0;
         let mut k = 0;
         let mut index_i: usize = 0;
