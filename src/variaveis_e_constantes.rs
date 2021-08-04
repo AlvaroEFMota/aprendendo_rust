@@ -17,4 +17,10 @@ pub fn run(){
     //Assign multiple variables at once
     let ( my_name, my_age) = ("Álvaro", 25);
     println!("my name is {} and my age is {}", my_name, my_age);
+
+    // Suposse that an user input a string with whitespaces
+    let spaces = String::from("    ");
+    // We would like thar spaces have the number of whitespaces without being mutable (We'll use shadowing)
+    let spaces = spaces.len();
+    println!("spaces: {}", spaces);
 }

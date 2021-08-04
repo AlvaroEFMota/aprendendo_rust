@@ -25,4 +25,7 @@ pub fn run(){
     let slice1: &[i32] = &numbers[0..2];
     println!("Slice: {:?}", slice);
     println!("Slice1: {:?}", slice1);
+
+    let ar = [3; 5];
+    println!("ar: {:?}", ar);
 }

@@ -45,4 +45,17 @@ pub fn run(){
 
     println!("{}",s);
 
+    {
+        let s1 = String::from("hello");
+        let s2 = s1; // the stack of s1 was copied to s2, but the heap is the same;
+        //println!("{}, world!", s1); //this piece of code will cause an error, because s1 was "moved" to s2
+        println!("s2 = {}", s2);
+    }
+
+    {
+        let s1 = String::from("hello");
+        let s2 = s1.clone(); // s2 has a new stack and a new heap with the content equal to s1
+        println!("s1 = {}, s2 = {}", s1, s2);
+    }
+    
 }
