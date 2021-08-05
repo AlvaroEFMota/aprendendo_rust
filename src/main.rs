@@ -13,9 +13,9 @@
 //mod enums;
 //mod cli;
 //mod generics;
-//mod sort;
+mod sort;
 //mod guessing_game;
-mod ownership1;
+//mod ownership1;
 //mod ownership2;
 
 
@@ -36,15 +36,18 @@ fn main() {
     //cli::run();
     //generics::run();
     //guessing_game::run();
-    ownership1::run();
+    //ownership1::run();
     //ownership2::run();
 
-    /*
+    
     let mut v: [i32; 9] = [3, 1, 4, 5, 2, 9, 7, 8, 6];
     let end = v.len();
-    sort::merge_sort(&mut v, 0, end);
-    println!("{:?}", v);
-    */
+    //sort::merge_sort(&mut v, 0, end);
+    //sort::bubble_sort(&mut v, 0, end);
+    sort::insertion_sort(&mut v, 0, end);
+
+    println!("sort {:?}", v);
+    
 
 
 }

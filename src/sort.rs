@@ -1,3 +1,5 @@
+//#[warn(dead_code)] // This is the default warning
+#[allow(dead_code)] // We use this to tell the compiler to stop warning the unused code
 pub fn merge_sort(v: &mut [i32], start: usize, end: usize) {
     if end-start > 1 {
         let middle = (start+end)/2;
@@ -45,5 +47,53 @@ pub fn merge_sort(v: &mut [i32], start: usize, end: usize) {
             v[index_i] = aux_k[p];
             index_i += 1;
         }
+    }
+}
+
+#[allow(dead_code)]
+pub fn bubble_sort(v: &mut [i32], start: usize, end: usize) {
+    let mut finish = false;
+    for _ in start..end {
+        if finish { break; }
+        finish = true;
+        for i in start..(end-1) {
+            if v[i] > v[i+1] {
+                let aux = v[i];
+                v[i] = v[i+1];
+                v[i+1] = aux;
+                finish = false;
+            }
+        }
+    }
+}
+
+#[allow(dead_code)]
+pub fn insertion_sort(v: &mut [i32], start: usize, end: usize) {
+    let mut j = start;
+    let mut k = end-1;
+    for _ in start..(end/2) {
+        let mut greater = v[j];
+        let mut smallest = v[k];
+        let mut greater_index = j;
+        let mut smallest_index = k;
+        for i in j..k+1 {
+            if v[i] > greater {
+                greater_index = i;
+                greater = v[i];
+            } else if v[i] < smallest {
+                smallest_index = i;
+                smallest = v[i];
+            }
+        }
+        let tmp = v[j];
+        v[j] = v[smallest_index];
+        v[smallest_index] = tmp;
+
+        let tmp = v[k];
+        v[k] = v[greater_index];
+        v[greater_index] = tmp;
+
+        j += 1;
+        k -= 1;
     }
 }
