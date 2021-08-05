@@ -44,7 +44,7 @@ fn main() {
     let end = v.len();
     //sort::merge_sort(&mut v, 0, end);
     //sort::bubble_sort(&mut v, 0, end);
-    sort::insertion_sort(&mut v, 0, end);
+    sort::selection_sort(&mut v, 0, end);
 
     println!("sort {:?}", v);
     

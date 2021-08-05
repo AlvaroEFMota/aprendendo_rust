@@ -68,7 +68,7 @@ pub fn bubble_sort(v: &mut [i32], start: usize, end: usize) {
 }
 
 #[allow(dead_code)]
-pub fn insertion_sort(v: &mut [i32], start: usize, end: usize) {
+pub fn selection_sort(v: &mut [i32], start: usize, end: usize) {
     let mut j = start;
     let mut k = end-1;
     for _ in start..(end/2) {
