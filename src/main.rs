@@ -51,3 +51,9 @@ fn main() {
 
 
 }
+
+#[test]
+fn teste() { // Teste exempe. To run, type cargo test
+    let a = 10;
+    assert_eq!(a, 10);
+}
