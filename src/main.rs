@@ -15,7 +15,7 @@
 //mod strings;
 //mod tuples;
 //mod arrays;
-//mod vectors;
+mod vectors;
 //mod conditionals;
 //mod loops;
 //mod functions;
@@ -31,7 +31,6 @@
 //mod slices;
 //mod modules;
 //mod sort;
-mod common_collections;
 
 
 fn main() {
@@ -41,7 +40,7 @@ fn main() {
     //strings::run();
     //tuples::run();
     //arrays::run();
-    //vectors::run();
+    vectors::run();
     //conditionals::run();
     //loops::run();
     //functions::run();
@@ -56,7 +55,6 @@ fn main() {
     //ownership2::run();
     //slices::run();
     //modules::run();
-    common_collections::run();
 
     /*let mut v: [i32; 9] = [3, 1, 4, 5, 2, 9, 7, 8, 6];
     let end = v.len();
