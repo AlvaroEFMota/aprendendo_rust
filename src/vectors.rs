@@ -2,6 +2,13 @@
 
 use std::mem; //if we put this, we can only use mem::size_of_val() intead of std::mem::size_of_val()
 
+#[derive(Debug)]
+enum SpreadSheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 pub fn run() {
     let mut numbers: Vec<i32> = vec![1, 2, 3, 4, 5];
     
@@ -82,4 +89,12 @@ pub fn run() {
         *i *= 2;
     }
     println!("v: {:?}", v);
+
+    let row: Vec<SpreadSheetCell> = vec! [
+        SpreadSheetCell::Int(3),
+        SpreadSheetCell::Float(27.6),
+        SpreadSheetCell::Text(String::from("Price"))
+    ];
+
+    println!("row: {:?}", row);
 }

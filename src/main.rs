@@ -2,20 +2,20 @@
  * Author:  Álvaro Ernani Fonseca Mota
  * E-mail:  alvaroefmota@gmail.com
  * References:
- *      https://www.youtube.com/watch?v=zF34dRivLOw     (Traversy Media)
- *      https://doc.rust-lang.org/book/title-page.html  (Rust Book)
+ *      <https://www.youtube.com/watch?v=zF34dRivLOw>     (Traversy Media)
+ *      <https://doc.rust-lang.org/book/title-page.html>  (Rust Book)
  * 
  * Any comment notation like this [1-5] means the exemple 1-5 of the Rust Book
  */
 
-
+//mod tests;
 //mod formatacao;
 //mod variaveis_e_constantes;
 //mod types;
 //mod strings;
 //mod tuples;
 //mod arrays;
-mod vectors;
+//mod vectors;
 //mod conditionals;
 //mod loops;
 //mod functions;
@@ -30,8 +30,12 @@ mod vectors;
 //mod ownership2;
 //mod slices;
 //mod modules;
-//mod sort;
-
+//mod hash_maps;
+//mod errors;
+//mod traits;
+//mod lifetimes;
+//mod closures;
+mod iterators;
 
 fn main() {
     //formatacao::run();
@@ -40,7 +44,7 @@ fn main() {
     //strings::run();
     //tuples::run();
     //arrays::run();
-    vectors::run();
+    //vectors::run();
     //conditionals::run();
     //loops::run();
     //functions::run();
@@ -55,21 +59,12 @@ fn main() {
     //ownership2::run();
     //slices::run();
     //modules::run();
-
-    /*let mut v: [i32; 9] = [3, 1, 4, 5, 2, 9, 7, 8, 6];
-    let end = v.len();
-    //sort::merge_sort(&mut v, 0, end);
-    //sort::bubble_sort(&mut v, 0, end);
-    //sort::selection_sort(&mut v, 0, end);
-    //v.sort();
-    println!("sort {:?}", v);
-    */
+    //hash_maps::run();
+    //errors::run();
+    //traits::run();
+    //lifetimes::run();
+    //closures::run();
+    iterators::run();
 
 
-}
-
-#[test]
-fn teste() { // Teste exempe. To run, type cargo test
-    let a = 10;
-    assert_eq!(a, 10);
 }
