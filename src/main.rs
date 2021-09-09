@@ -35,7 +35,11 @@
 //mod traits;
 //mod lifetimes;
 //mod closures;
-mod iterators;
+//mod iterators;
+//mod smart_pointers;
+//mod threads;
+//mod matrix_multiplication;
+mod oop;
 
 fn main() {
     //formatacao::run();
@@ -64,7 +68,10 @@ fn main() {
     //traits::run();
     //lifetimes::run();
     //closures::run();
-    iterators::run();
-
+    //iterators::run();
+    //smart_pointers::run();
+    //threads::run();
+    //matrix_multiplication::run();
+    oop::run();
 
 }
