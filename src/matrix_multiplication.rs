@@ -25,7 +25,7 @@ fn row_col_mult(
     }
     result
 }
-
+#[allow(unused_must_use)]
 #[allow(dead_code)]
 fn thread_mult(mtx1: &Vec<Vec<f64>>, mtx2: &Vec<Vec<f64>>) -> Vec<Vec<f64>> {
     let r = mtx1.len();
@@ -67,7 +67,7 @@ fn thread_mult(mtx1: &Vec<Vec<f64>>, mtx2: &Vec<Vec<f64>>) -> Vec<Vec<f64>> {
         handle.join().unwrap();
     }
 
-    for i in 0..r*c {
+    for _ in 0..r*c {
         let received = receiver.recv().unwrap();
         println!("Received: {} from [{},{}]", received.value, received.row, received.column);
         result[received.row][received.column] = received.value;
