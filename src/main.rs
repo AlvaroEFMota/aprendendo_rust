@@ -38,8 +38,8 @@
 //mod iterators;
 //mod smart_pointers;
 //mod threads;
-//mod matrix_multiplication;
-mod oop;
+mod matrix_multiplication;
+//mod oop;
 
 fn main() {
     //formatacao::run();
@@ -71,7 +71,7 @@ fn main() {
     //iterators::run();
     //smart_pointers::run();
     //threads::run();
-    //matrix_multiplication::run();
-    oop::run();
+    matrix_multiplication::run();
+    //oop::run();
 
 }
